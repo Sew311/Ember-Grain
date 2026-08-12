@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember &amp; Grain — Coffee Roasted Slow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain-overlay"></div>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 40 40" width="30" height="30" fill="none">
+          <path d="M8 16h20v9a10 10 0 0 1-10 10 10 10 0 0 1-10-10v-9z" stroke="currentColor" stroke-width="2"/>
+          <path d="M28 18h3a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2"/>
+          <path d="M13 8c-1.5 1.7-1.5 3.3 0 5M20 8c-1.5 1.7-1.5 3.3 0 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="logo-text">Ember<em>&amp;</em>Grain</span>
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit</a>
+    </nav>
+
+    <a href="#menu" class="btn btn-ghost nav-cta">Order Ahead</a>
+
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Small-batch roastery &amp; coffee bar</p>
+      <h1 class="hero-title">
+        Roasted slow.<br>
+        Poured with <span class="ital">intent.</span>
+      </h1>
+      <p class="hero-sub">
+        We source single-origin beans, roast them in-house every Tuesday, and pull every
+        shot like it's the only one we'll make today.
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">View the menu</a>
+        <a href="#about" class="btn btn-text">Our story <span class="arrow">→</span></a>
+      </div>
+      <div class="hero-stats">
+        <div><span class="stat-num">04</span><span class="stat-label">roast profiles</span></div>
+        <div><span class="stat-num">6am</span><span class="stat-label">first pour</span></div>
+        <div><span class="stat-num">100%</span><span class="stat-label">direct trade</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="pour-scene">
+        <svg class="steam-svg" viewBox="0 0 220 300" width="220" height="300">
+          <path class="steam s1" d="M70 40 C 60 30, 80 20, 70 8" stroke="#F5EDE1" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0"/>
+          <path class="steam s2" d="M100 34 C 90 24, 110 14, 100 2" stroke="#F5EDE1" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0"/>
+          <path class="steam s3" d="M130 40 C 120 30, 140 20, 130 8" stroke="#F5EDE1" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0"/>
+
+          <!-- pour-over dripper -->
+          <path d="M60 60 L140 60 L120 100 L80 100 Z" fill="none" stroke="#D4A857" stroke-width="2"/>
+          <rect x="95" y="30" width="10" height="30" fill="none" stroke="#D4A857" stroke-width="2"/>
+
+          <!-- cup -->
+          <path d="M55 110 L145 110 L138 200 Q100 214 62 200 Z" fill="#241A15" stroke="#C17A3D" stroke-width="2"/>
+          <ellipse cx="100" cy="110" rx="45" ry="8" fill="#8B4226" stroke="#C17A3D" stroke-width="2"/>
+          <path d="M145 125 Q172 128 168 152 Q165 172 140 168" fill="none" stroke="#C17A3D" stroke-width="2"/>
+
+          <!-- saucer -->
+          <ellipse cx="100" cy="212" rx="62" ry="8" fill="none" stroke="#8B4226" stroke-width="1.5" opacity="0.6"/>
+        </svg>
+        <div class="roast-stamp">
+          <svg viewBox="0 0 120 120" width="120" height="120">
+            <circle cx="60" cy="60" r="55" fill="none" stroke="#D4A857" stroke-width="1.2"/>
+            <circle cx="60" cy="60" r="46" fill="none" stroke="#D4A857" stroke-width="1"/>
+            <path id="stampCircle" d="M60,14 A46,46 0 1 1 59.9,14" fill="none"/>
+            <text font-family="'JetBrains Mono', monospace" font-size="8.6" fill="#D4A857" letter-spacing="2.5">
+              <textPath href="#stampCircle" startOffset="0%">EST. 2019 · SMALL BATCH ROASTERY · EMBER &amp; GRAIN ·</textPath>
+            </text>
+            <text x="60" y="65" text-anchor="middle" font-family="'Fraunces', serif" font-size="20" fill="#D4A857">E&amp;G</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Ethiopia — Yirgacheffe</span><span>•</span>
+      <span>Colombia — Huila</span><span>•</span>
+      <span>Guatemala — Antigua</span><span>•</span>
+      <span>Kenya — Nyeri</span><span>•</span>
+      <span>Brazil — Cerrado</span><span>•</span>
+      <span>Ethiopia — Yirgacheffe</span><span>•</span>
+      <span>Colombia — Huila</span><span>•</span>
+      <span>Guatemala — Antigua</span><span>•</span>
+      <span>Kenya — Nyeri</span><span>•</span>
+      <span>Brazil — Cerrado</span><span>•</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-visual" aria-hidden="true">
+      <svg viewBox="0 0 300 340" width="100%" height="100%">
+        <rect x="0" y="0" width="300" height="340" rx="6" fill="#241A15"/>
+        <g opacity="0.9">
+          <circle cx="70" cy="60" r="9" fill="#8B4226"/>
+          <circle cx="95" cy="48" r="9" fill="#C17A3D"/>
+          <circle cx="118" cy="66" r="9" fill="#8B4226"/>
+          <circle cx="60" cy="86" r="9" fill="#D4A857"/>
+          <circle cx="88" cy="78" r="9" fill="#8B4226"/>
+          <circle cx="112" cy="92" r="9" fill="#C17A3D"/>
+        </g>
+        <path d="M40 190 Q150 150 260 190 L260 300 Q150 340 40 300 Z" fill="#1C1410" stroke="#8B4226" stroke-width="1.5"/>
+        <text x="150" y="245" text-anchor="middle" font-family="'Fraunces', serif" font-style="italic" font-size="17" fill="#F5EDE1">roasted</text>
+        <text x="150" y="270" text-anchor="middle" font-family="'Fraunces', serif" font-style="italic" font-size="17" fill="#F5EDE1">every Tuesday</text>
+      </svg>
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">Since 2019</p>
+      <h2>A shop built around one machine and one habit.</h2>
+      <p>
+        Ember &amp; Grain started in a 40-square-foot roasting closet behind a bicycle shop.
+        The bikes are gone now, but the habit stayed: we still roast in small batches,
+        cup every lot before it goes on the menu, and write the origin on the bag by hand.
+      </p>
+      <p>
+        No syrups you can't pronounce, no espresso machine older than the person pulling
+        the shot. Just good beans, treated properly, served by people who taste the coffee
+        before they hand it to you.
+      </p>
+      <div class="about-facts">
+        <div class="fact">
+          <span class="fact-num">01</span>
+          <div>
+            <h3>Cupped daily</h3>
+            <p>Every roast is tasted before service — no exceptions, no off days.</p>
+          </div>
+        </div>
+        <div class="fact">
+          <span class="fact-num">02</span>
+          <div>
+            <h3>Direct trade</h3>
+            <p>We buy straight from four family farms and pay above market, every harvest.</p>
+          </div>
+        </div>
+        <div class="fact">
+          <span class="fact-num">03</span>
+          <div>
+            <h3>Roasted on-site</h3>
+            <p>The drum runs Tuesday mornings — you can watch it, and smell it, from the bar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section class="menu" id="menu">
+  <div class="menu-inner">
+    <p class="eyebrow center">What we pour</p>
+    <h2 class="section-title center">The Menu</h2>
+
+    <div class="menu-tabs" role="tablist">
+      <button class="tab active" data-tab="coffee">Coffee</button>
+      <button class="tab" data-tab="cold">Cold &amp; Iced</button>
+      <button class="tab" data-tab="food">Pastries</button>
+    </div>
+
+    <div class="menu-panel active" data-panel="coffee">
+      <div class="menu-list">
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Espresso</h3><span class="dots"></span><span class="price">$3.50</span></div>
+          <p>Double shot, our house blend, pulled to order.</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Cortado</h3><span class="dots"></span><span class="price">$4.50</span></div>
+          <p>Equal parts espresso and steamed milk, no foam.</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Pour-Over</h3><span class="dots"></span><span class="price">$5.50</span></div>
+          <p>Single-origin, brewed to order — ask what's on the board.</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Cappuccino</h3><span class="dots"></span><span class="price">$4.75</span></div>
+          <p>Espresso, steamed milk, a thick collar of microfoam.</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Flat White</h3><span class="dots"></span><span class="price">$4.75</span></div>
+          <p>Ristretto shots, velvet milk, served in a small cup.</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Drip Coffee</h3><span class="dots"></span><span class="price">$3.00</span></div>
+          <p>Batch-brewed hourly from our current house roast.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-panel" data-panel="cold">
+      <div class="menu-list">
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Cold Brew</h3><span class="dots"></span><span class="price">$4.75</span></div>
+          <p>Steeped 18 hours, served over ice, no dilution.</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Iced Latte</h3><span class="dots"></span><span class="price">$5.00</span></div>
+          <p>Double espresso, cold milk, poured over ice.</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Nitro Cold Brew</h3><span class="dots"></span><span class="price">$5.50</span></div>
+          <p>Charged on tap, cascading foam, no sweetener needed.</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Iced Shakerato</h3><span class="dots"></span><span class="price">$5.25</span></div>
+          <p>Espresso shaken hard over ice until it foams.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-panel" data-panel="food">
+      <div class="menu-list">
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Almond Croissant</h3><span class="dots"></span><span class="price">$4.25</span></div>
+          <p>Twice-baked, filled with almond cream, from the oven by 7am.</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Sourdough Toast</h3><span class="dots"></span><span class="price">$6.00</span></div>
+          <p>House sourdough, cultured butter, sea salt.</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Cardamom Bun</h3><span class="dots"></span><span class="price">$3.75</span></div>
+          <p>Swedish-style, laminated dough, coarse sugar.</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><h3>Banana Bread</h3><span class="dots"></span><span class="price">$3.50</span></div>
+          <p>Baked daily, dense crumb, walnut on top.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISIT / CONTACT ===== -->
+<section class="visit" id="visit">
+  <div class="visit-inner">
+    <div class="visit-copy">
+      <p class="eyebrow">Come by</p>
+      <h2>Visit the bar</h2>
+      <div class="visit-block">
+        <h3>Hours</h3>
+        <div class="hours-row"><span>Mon – Fri</span><span>6:00am – 5:00pm</span></div>
+        <div class="hours-row"><span>Saturday</span><span>7:00am – 5:00pm</span></div>
+        <div class="hours-row"><span>Sunday</span><span>7:00am – 3:00pm</span></div>
+      </div>
+      <div class="visit-block">
+        <h3>Address</h3>
+        <p>142 Kettlewell Street<br>Riverside District</p>
+      </div>
+      <div class="visit-block">
+        <h3>Say hello</h3>
+        <p>hello@emberandgrain.co<br>(555) 019-2244</p>
+      </div>
+    </div>
+
+    <form class="visit-form" id="contactForm">
+      <h3>Ask us a question</h3>
+      <label>
+        Name
+        <input type="text" name="name" placeholder="Your name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" placeholder="you@email.com" required>
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="4" placeholder="What's on your mind?" required></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary">Send message</button>
+      <p class="form-note" id="formNote" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="#top" class="logo footer-logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 40 40" width="26" height="26" fill="none">
+          <path d="M8 16h20v9a10 10 0 0 1-10 10 10 10 0 0 1-10-10v-9z" stroke="currentColor" stroke-width="2"/>
+          <path d="M28 18h3a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </span>
+      <span class="logo-text">Ember<em>&amp;</em>Grain</span>
+    </a>
+    <nav class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="Twitter / X">X</a>
+      <a href="#" aria-label="TikTok">TT</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Ember &amp; Grain Coffee Roastery</span>
+    <span>Roasted &amp; built with care.</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
